@@ -18,10 +18,12 @@ function Sidebar() {
             <br />
             <strong className="sidebar-title">PLAYLIST</strong>
             <hr />
-            {console.log("I have this playplist:",playlists)}
-            {playlists?.items?.map(playlist => (
-                <SidebarOption title={playlist.name} />
-            ))}
+            {/* {console.log("I have this playplist:",playlists)} */}
+            <div className="userPlaylists">
+                {playlists?.items?.map(playlist => (
+                    <SidebarOption title={playlist.name} />
+                ))}
+            </div>
         </div>
     )
 }

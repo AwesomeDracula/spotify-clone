@@ -1,0 +1,16 @@
+.useraccount {
+    display: flex;
+    align-items: center;
+    background-color: #050505;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.useraccount:hover {
+    background-color: #282828;
+}
+
+.useraccount > h4 {
+    margin: 0 20px;
+}

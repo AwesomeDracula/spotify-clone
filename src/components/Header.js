@@ -1,19 +1,12 @@
 import React from 'react'
 import './Header.css';
-import SearchIcon from '@material-ui/icons/Search';
-import { Avatar } from '@material-ui/core';
-import { useDataLayerValue } from '../contextapi/DataLayer';
 import UserAccount from './UserAccount';
+import HeaderSearchBar from './HeaderSearchBar';
 
-function Header({spotifyApi}) {
-    // const [{user}, dispatch] = useDataLayerValue();
+function Header() {
     return (
         <div className="header">
-            <div className="header-left">
-                <SearchIcon />
-                <input placeholder="Search for Artists, Songs, ..." type="text" />
-            </div>
-            {/* {console.log(user)} */}
+            <HeaderSearchBar />
             <UserAccount />
         </div>
     )

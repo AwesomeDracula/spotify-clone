@@ -1,0 +1,12 @@
+.home{
+    flex: .8;
+    height: calc(100vh - 85px);
+    color: white;
+    overflow-y: overlay;
+    background-color: #121212;
+    padding: 20px 40px;
+}
+
+.home::-webkit-scrollbar {
+    display: none;
+}

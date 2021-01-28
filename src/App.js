@@ -10,7 +10,7 @@ const spotifyApi = new SpotifyWebApi();
 
 function App() {
   // const [token, setToken] = useState(null);
-  const [{user, token}, dispatch] = useDataLayerValue();
+  const [{user, playlists, token}, dispatch] = useDataLayerValue();
   // console.log(useDataLayerValue());
 
   useEffect(() => {
@@ -41,24 +41,22 @@ function App() {
 
       spotifyApi.getPlaylist("3SzuSFG2e1a2sSPqWuohYu").then(response => {
         dispatch({
-          type: 'SET_DISCOVER_WEEKLY',
-          discover_weekly: response
+          type: 'SET_CURRENT_PLAYLIST',
+          current_playlist: response
         })
       })
     }
   }, []);
 
   return (
-    <div className="app">
-      {
-        token ? (
-          <Player spotifyApi={spotifyApi}/>
-        ) : (
-          <Login />
-        )
-      }
-      
-
+    <div className="app">    
+        {
+          token ? (
+            <Player spotifyApi={spotifyApi}/>
+          ) : (
+            <Login />
+          )
+        }
     </div>
   );
 }

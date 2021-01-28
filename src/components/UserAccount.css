@@ -1,4 +1,4 @@
-.useraccount {
+/* .useraccount {
     display: flex;
     align-items: center;
     background-color: #050505;
@@ -13,4 +13,63 @@
 
 .useraccount > h4 {
     margin: 0 20px;
+} */
+
+.useraccount > .dropdown > .dropdown-menu {
+    overflow: hidden;
+    background-color: #282828;
+    padding: .5rem .5rem;
+    top: 10px !important;
+}
+
+.useraccount > .dropdown > .dropdown-menu > .dropdown-item{
+    color: #b9b9b9;
+    box-sizing: border-box !important;
+}
+
+.useraccount > .dropdown > .dropdown-menu > .dropdown-item:hover{
+    background-color: #3e3e3e;
+}
+
+.useraccount > .dropdown > .dropdown-menu > .dropdown-item:first-child > svg {
+    margin-left: 1.5rem;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #404040 !important;
+}
+
+.useraccount-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dropdown-toggle {
+    padding: .1rem 1.25rem .1rem .17rem !important;
+    border-radius: 2rem !important;
+    background-color: #050505 !important;
+    border: unset !important;
+}
+
+.dropdown-toggle:hover {
+    background-color: #282828 !important;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-right: .255em;
+}
+
+.dropdown-toggle:focus {
+    background-color: #282828 !important;
+    box-shadow: unset !important;
+    border: unset !important;
+}
+
+.useraccount-name > h4 {
+    font-size: 1rem;
+    margin: 0 .5rem;
 }

@@ -4,22 +4,6 @@
     margin-bottom: 30px;
 }
 
-.header-left {
-    flex: .5;
-    min-width: 70px;
-    background-color: white;
-    color: gray;
-    border-radius: 30px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.header-left > input {
-    border: none;
-    width: 100%;
-}
-
 /* .header-right {
     display: flex;
     align-items: center;

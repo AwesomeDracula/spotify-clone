@@ -5,7 +5,7 @@ import App from './App';
 import {DataLayer} from './contextapi/DataLayer';
 import reportWebVitals from './reportWebVitals';
 import reducer, { initialState } from './reducer/reducer';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

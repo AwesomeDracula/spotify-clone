@@ -1,0 +1,19 @@
+.headerSearchBar {
+    flex: .5;
+    min-width: 70px;
+    background-color: white;
+    color: gray;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.headerSearchBar > input {
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    outline: unset;
+}

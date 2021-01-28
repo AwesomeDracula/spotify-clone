@@ -7,12 +7,22 @@
     transition: 200ms color ease-in;
 }
 
+.sidebarOption:focus {
+    background-color: #282828;
+}
+
 .sidebarOption:hover {
     color: white;
 }
 
 .sidebarOption-icon {
     padding: 0 10px;
+}
+
+.sidebarOption > h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 0;
 }
 
 .sidebarOption > p {

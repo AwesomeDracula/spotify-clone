@@ -8,10 +8,18 @@
     height: 100vh;
 }
 
+.sidebar .selected .sidebarOption {
+    background-color: white;
+}
+
 .sidebar > hr {
     border: 1px solid #282828;
     width: 90%;
     margin: 10px auto;
+}
+
+.sidebar > .selected > .sidebarOption {
+    background-color: #282828;
 }
 
 .sidebar-logo {
@@ -34,4 +42,8 @@
 
 .userPlaylists::-webkit-scrollbar {
     display: none;
+}
+
+a:hover {
+    text-decoration: none !important;
 }

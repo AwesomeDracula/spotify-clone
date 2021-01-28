@@ -1,0 +1,21 @@
+.collection-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.collection-header > div > a > .btn {
+    margin-right: 20px;
+    background-color: #121212;
+    font-weight: 700;
+    border: unset;
+}
+
+.collection-header > div > .selected > .btn {
+    background-color: #282828;
+}
+
+.collection-header > div > a > .btn:focus {
+    outline: unset;
+    box-shadow: unset;
+}

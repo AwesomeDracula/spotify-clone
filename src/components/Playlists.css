@@ -1,0 +1,36 @@
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card {
+    border: unset !important;
+    margin-bottom: 30px;
+    background-color: #181818 !important;
+    padding: 16px;
+    padding-bottom: 0;
+}
+
+.card > .card-body {
+    background-color: #181818;
+    padding-left: 0;
+}
+
+.card > .card-body > .card-text {
+    height: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-transform: none;
+}

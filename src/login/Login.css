@@ -12,6 +12,6 @@
     border-radius: 99px;
     background-color: #1db954;
     font-weight: 800;
-    color: white;
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
 }

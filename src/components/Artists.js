@@ -1,6 +1,6 @@
 import React from 'react';
-import './Playlists.css';
 import { useDataLayerValue } from '../contextapi/DataLayer';
+import './Artists.css';
 import {
     Container,
     Row,
@@ -12,20 +12,18 @@ import {
     CardTitle,
   } from "reactstrap";
 
-function Playlists() {
-    const [{playlists}, dispatch] = useDataLayerValue();
+function Artists() {
+    const [{followed_artists}, dispatch] = useDataLayerValue();
     return (
-        <div className="playlists">
+        <div className="artists">
             <Container fluid={true}>
-                <h4>Playlist</h4>
+                <h4>Nghệ sĩ</h4>
                 <Row>
-                    {/* <Col sm="4">
-                        <h3>Hello</h3>
-                    </Col> */}
-                {playlists?.items?.map((item) => (
+                {followed_artists?.artists.items.map((item) => (
                     <Col sm="2">
                         <Card>
                             <CardImg
+                                roundedCircle
                                 top
                                 width="100%"
                                 src={item.images[0].url}
@@ -33,7 +31,7 @@ function Playlists() {
                             />
                             <CardBody>
                             <CardTitle tag="h5">{item.name}</CardTitle>
-                            <CardText>{item.description}</CardText>
+                            <CardText>Follower: {item.followers.total}</CardText>
                             {/* <Button>
                                 Add to cart
                             </Button> */}
@@ -47,4 +45,4 @@ function Playlists() {
     )
 }
 
-export default Playlists
+export default Artists

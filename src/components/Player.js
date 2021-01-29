@@ -20,12 +20,11 @@ function Player({spotifyApi}) {
                     <Switch>
                         <Route path="/" exact>
                             <Home />
-                            {/* <Body spotifyApi={spotifyApi}/> */}
                         </Route>
                         <Route path="/search">
                             <Search />
                         </Route>
-                        <Route path="/collection">
+                        <Route path="/collection" >
                             <Collection />
                         </Route>
                         {playlists?.items?.map(playlist => (

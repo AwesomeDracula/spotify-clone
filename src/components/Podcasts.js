@@ -1,5 +1,4 @@
 import React from 'react';
-import './Playlists.css';
 import { useDataLayerValue } from '../contextapi/DataLayer';
 import {
     Container,
@@ -12,28 +11,25 @@ import {
     CardTitle,
   } from "reactstrap";
 
-function Playlists() {
-    const [{playlists}, dispatch] = useDataLayerValue();
+function Podcasts() {
+    const [{podcasts},dispatch] = useDataLayerValue();
     return (
-        <div className="playlists">
+        <div className="podcasts">
             <Container fluid={true}>
-                <h4>Playlist</h4>
+                <h4>Podcasts</h4>
                 <Row>
-                    {/* <Col sm="4">
-                        <h3>Hello</h3>
-                    </Col> */}
-                {playlists?.items?.map((item) => (
+                {podcasts?.items.map((item) => (
                     <Col sm="2">
                         <Card>
                             <CardImg
                                 top
                                 width="100%"
-                                src={item.images[0].url}
+                                src={item.show.images[0].url}
                                 alt="Card image"
                             />
                             <CardBody>
-                            <CardTitle tag="h5">{item.name}</CardTitle>
-                            <CardText>{item.description}</CardText>
+                            <CardTitle tag="h5">{item.show.name}</CardTitle>
+                            <CardText>{item.show.publisher}</CardText>
                             {/* <Button>
                                 Add to cart
                             </Button> */}
@@ -47,4 +43,4 @@ function Playlists() {
     )
 }
 
-export default Playlists
+export default Podcasts

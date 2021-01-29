@@ -8,6 +8,9 @@ import {
     useRouteMatch
   } from "react-router-dom";
 import Playlists from './Playlists';
+import Albums from './Albums';
+import Artists from './Artists';
+import Podcasts from './Podcasts';
 
 function Collection() {
     let { path } = useRouteMatch();
@@ -15,6 +18,9 @@ function Collection() {
         <div className="collection">
             <CollectionHeader />
             <Switch>
+                <Route exact path={path}>
+                    <Playlists />
+                </Route>
                 <Route path={`${path}/:topicId`}>
                     <Topic />
                 </Route>
@@ -31,14 +37,14 @@ function Topic() {
     // of the URL indicates a placeholder that we can
     // get from `useParams()`.
     let { topicId } = useParams();
-    console.log(useParams());
+    // console.log(useParams());
   
     return (
       <div>
         {topicId === 'playlists' && <Playlists />}
-        {topicId === 'podcasts' && <h3>1</h3>}
-        {topicId === 'artists' && <h3>3</h3>}
-        {topicId === 'albums' && <h3>4</h3>}
+        {topicId === 'podcasts' && <Podcasts />}
+        {topicId === 'artists' && <Artists />}
+        {topicId === 'albums' && <Albums />}
       </div>
     );
   }

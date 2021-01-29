@@ -3,17 +3,27 @@
     padding-right: 0;
 }
 
+.container-fluid > h4 {
+    margin-bottom: 20px;
+}
+
 .card {
     border: unset !important;
     margin-bottom: 30px;
     background-color: #181818 !important;
     padding: 16px;
     padding-bottom: 0;
+    cursor: pointer;
+}
+
+.card:hover, .card:hover .card-body {
+    background-color: #282828 !important;
 }
 
 .card > .card-body {
     background-color: #181818;
     padding-left: 0;
+    padding-right: 0;
 }
 
 .card > .card-body > .card-text {
@@ -28,9 +38,12 @@
 }
 
 .card-title {
+    height: 24px;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: normal;
     text-transform: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

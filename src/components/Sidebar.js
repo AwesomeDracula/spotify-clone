@@ -38,7 +38,7 @@ function Sidebar({spotifyApi}) {
             <div className="userPlaylists">
                 {playlists?.items?.map(playlist => (
                     <div onClick={() => playlistOnClicked(playlist.id)}>
-                        <Link to={"/playlist/"+playlist.name} >
+                        <Link to={"/playlist/"+playlist.name.replace(/\s/g,'')} >
                             <SidebarOption title={playlist.name} />
                         </Link>
                     </div>

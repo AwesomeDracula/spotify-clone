@@ -30,7 +30,8 @@
 }
 
 .footer-songInfo > h4 {
-    margin-bottom: 5px;
+    margin-bottom: 10px 0;  
+    font-size: 1rem;
 }
 
 .footer-songInfo > p {

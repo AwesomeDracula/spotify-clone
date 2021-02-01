@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+import { useDataLayerValue } from '../contextapi/DataLayer';
 
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -11,15 +12,30 @@ import VolumeDownIcon from '@material-ui/icons/VolumeDown';
 import { Grid, Slider } from '@material-ui/core';
 
 function Footer() {
+    const [{playingTrack}] = useDataLayerValue();
     return (
         <div className="footer">
-            <div className="footer-left">
-                <img className="footer-albumLogo" src='' alt=''/>
-                <div className="footer-songInfo">
-                    <h4>Name</h4>
-                    <p>Singer</p>
+            {!playingTrack && 
+            (
+                <div className="footer-left">
+                    <img className="footer-albumLogo" src="" alt=""/>
+                    <div className="footer-songInfo">
+                        <h4>Name</h4>
+                        <p>Singer</p>
+                    </div>
                 </div>
-            </div>
+            )}
+            {playingTrack &&
+            (
+                <div className="footer-left">
+                    <img className="footer-albumLogo" src={playingTrack.src} alt=""/>
+                    <div className="footer-songInfo">
+                        <h4>{playingTrack.name}</h4>
+                        <p>{playingTrack.singer}</p>
+                    </div>
+                </div>
+            )
+            }
 
             <div className="footer-center">
                 <ShuffleIcon className="footer-green" />

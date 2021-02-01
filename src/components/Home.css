@@ -10,3 +10,12 @@
 .home::-webkit-scrollbar {
     display: none;
 }
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .container-fluid h4 {
+    margin: 30px 0;
+}

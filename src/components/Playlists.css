@@ -47,3 +47,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.card > img {
+    width: 141.53px;
+    height: 141.53px;
+    object-fit: fill;
+}

@@ -31,7 +31,7 @@ function Artists() {
                             />
                             <CardBody>
                             <CardTitle tag="h5">{item.name}</CardTitle>
-                            <CardText>Follower: {item.followers.total}</CardText>
+                            <CardText>Followers: {item.followers.total}</CardText>
                             {/* <Button>
                                 Add to cart
                             </Button> */}

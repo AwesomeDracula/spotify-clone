@@ -25,7 +25,7 @@ function UserAccount() {
                     <DropdownItem><span>Tài khoản</span><FontAwesomeIcon icon={faUser}/></DropdownItem>
                     <DropdownItem>Hồ sơ</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Đăng xuất</DropdownItem>
+                    <DropdownItem><a href="https://spotify-clone-af0ff.web.app">Đăng xuất</a></DropdownItem>
                 </DropdownMenu>
             </Dropdown>
         </div>

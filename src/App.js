@@ -10,7 +10,7 @@ const spotifyApi = new SpotifyWebApi();
 
 function App() {
   // const [token, setToken] = useState(null);
-  const [{user, playlists, token, saved_album}, dispatch] = useDataLayerValue();
+  const [{user, playlists, token, saved_album, searchResponse}, dispatch] = useDataLayerValue();
   // console.log(useDataLayerValue());
 
   useEffect(() => {
@@ -58,13 +58,19 @@ function App() {
           type: 'SET_FOLLOWED_ARTISTS',
           followed_artists: response
         })
-      })
+      });
 
       spotifyApi.getMySavedShows().then(response => {
-        console.log("I have",response);
         dispatch({
           type: 'SET_PODCASTS',
           podcasts: response
+        })
+      });
+
+      spotifyApi.getNewReleases().then(response => {
+        dispatch({
+          type: 'SET_NEW_RELEASES',
+          newReleases: response
         })
       })
     }

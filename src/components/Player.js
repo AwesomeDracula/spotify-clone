@@ -22,13 +22,13 @@ function Player({spotifyApi}) {
                             <Home />
                         </Route>
                         <Route path="/search">
-                            <Search />
+                            <Search spotifyApi={spotifyApi}/>
                         </Route>
                         <Route path="/collection" >
                             <Collection />
                         </Route>
                         {playlists?.items?.map(playlist => (
-                            <Route path={"/playlist/"+playlist.name}>
+                            <Route path={"/playlist/"+playlist.name.replace(/\s/g,'')}>
                                 <Body spotifyApi={spotifyApi}/>
                             </Route>
                         ))}

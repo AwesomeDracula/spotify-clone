@@ -16,7 +16,7 @@ function Body({spotifyApi}) {
             <div className="body-info">
                 <img src={current_playlist?.images[0].url} alt="" />
                 <div className="body-infoText">
-                    {console.log(current_playlist)}
+                    {/* {console.log(current_playlist)} */}
                     <strong>PLAYLIST</strong>
                     <h2>{current_playlist?.name}</h2>
                     <p>{current_playlist?.description}</p>
